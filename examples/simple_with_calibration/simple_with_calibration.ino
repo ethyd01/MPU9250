@@ -47,7 +47,16 @@ void print_roll_pitch_yaw() {
     Serial.print(mpu.getPitch(), 2);
     Serial.print(", ");
     Serial.println(mpu.getRoll(), 2);
+
+    Serial.print("MagX, MagY, MagZ: ");
+    Serial.print(mpu.getMagX(), 2);
+    Serial.print(", ");
+    Serial.print(mpu.getMagY(), 2);
+    Serial.print(", ");
+    Serial.println(mpu.getMagZ(), 2);
+    delay(1000);
 }
+
 
 void print_calibration() {
     Serial.println("< calibration parameters >");
